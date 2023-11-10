@@ -98,6 +98,7 @@ const MoviesDetails = () => {
                     <h3 className={css.header}>Production companies</h3>
                     <div className={css.prouctionCompanies}>{productionCompaniesList}</div>
                   </>
+                  <div className={css.imges}></div>
           </div>
         </div>
       )}
@@ -124,9 +125,7 @@ const MoviesDetails = () => {
               state={location.state}
             >
               Reviews{' '}
-              <span>
                 <i className={css.down}></i>
-              </span>
             </NavLink>
           </li>
         </ul>
