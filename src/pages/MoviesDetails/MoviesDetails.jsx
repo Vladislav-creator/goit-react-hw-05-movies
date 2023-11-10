@@ -68,7 +68,7 @@ return (
         <h3 className={css.subTitle}>Genres :</h3>
         <ul className={css.listNamesGenre}>
           {movie.genres?.map(genre => (
-            <li className="nameGenre" key={genre.id}>{genre.name}</li>
+            <li className="nameGenre" key={genre.id}> {genre.name}</li>
           ))}
         </ul>
       </div>
@@ -79,12 +79,12 @@ return (
       <h2 className={css.subTitleInfo}>Additional information</h2>
       <ul>
         <li className={css.detailsLi}>
-          <NavLink className="details-link" to="cast" state={location.state}>
+          <NavLink className={css.detailsLink} to="cast" state={location.state}>
             Cast <span><i className={css.down}></i></span>
           </NavLink>
         </li>
         <li className={css.detailsLi}>
-          <NavLink className="details-link" to="reviews" state={location.state}>
+          <NavLink className={css.detailsLink} to="reviews" state={location.state}>
             Reviews <span><i className={css.down}></i></span>
           </NavLink>
         </li>
