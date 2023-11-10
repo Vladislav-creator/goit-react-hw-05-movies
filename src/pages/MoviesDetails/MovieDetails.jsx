@@ -58,7 +58,7 @@ return (
             ? BASE_POSTER_URL + movie.poster_path
             : PLACEHOLDER + '?text=' + movie.original_title
         }`}
-        alt="get"
+        alt={movie.original_title}
       />
       <div>
         <h2 className={css.filmTitle}>{movie.original_title}</h2>
@@ -78,13 +78,13 @@ return (
     <div>
       <h2 >Additional information</h2>
       <ul>
-        <li className={css.buttonsLink}>
-          <NavLink  to="cast" state={location.state}>
+        <li className={css.detailsLi}>
+          <NavLink className="details-link" to="cast" state={location.state}>
             Cast <span><i className={css.down}></i></span>
           </NavLink>
         </li>
-        <li className={css.buttonsLink}>
-          <NavLink  to="reviews" state={location.state}>
+        <li className={css.detailsLi}>
+          <NavLink className="details-link" to="reviews" state={location.state}>
             Reviews <span><i className={css.down}></i></span>
           </NavLink>
         </li>

@@ -32,7 +32,21 @@ i {
    border: 3px solid #ff3cac; 
  }
 }
-
+.detailsLi {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
+  transition: box-shadow 250ms linear;
+  border-radius: 10px;
+ 
+ display: inline-block;
+ margin-right: 20px;
+ 
+}
 .filmWraper {
   display: flex;
   gap: 12px;
