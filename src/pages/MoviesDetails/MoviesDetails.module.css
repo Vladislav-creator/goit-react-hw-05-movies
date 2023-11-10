@@ -4,6 +4,7 @@ i {
   display: inline-block;
   padding: 3px;
 }
+
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
@@ -13,7 +14,7 @@ i {
   -webkit-transform: rotate(45deg);
 }
 
-.buttonsLink{
+.backLink{
   cursor: pointer;
   text-align: center;
   font-weight: bold;
@@ -96,7 +97,24 @@ i {
   border: 3px solid #ff3cac;
   color: black;
 }
+.header {
+  margin: 15px 0 5px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
 
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+.prouctionCompanies {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 10px;
+}
 
 
 
