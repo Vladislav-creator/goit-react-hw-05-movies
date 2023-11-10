@@ -25,9 +25,9 @@ const Reviews = () => {
     <ul className={css.styledList}>
       {reviews.map(({ id, author, content }) => (
         <li className={css.listItem} key={id}>
-          <p>
+          <h3 className={css.listItem}>
             <span>Author:</span> {author}
-          </p>
+          </h3>
           <p className={css.reviewsDescr}>{content}</p>
         </li>
       ))}

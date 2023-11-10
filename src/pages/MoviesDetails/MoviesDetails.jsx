@@ -60,15 +60,15 @@ return (
         }`}
         alt={movie.original_title}
       />
-      <div>
-        <h2 className={css.filmTitle}>{movie.original_title}</h2>
-        <h3 className={css.filmSubTitle}>Rating: {Math.round(movie.vote_average)}</h3>
-        <h3 className={css.filmSubTitle}>Overview</h3>
-        <p className={css.filmDescr}>{movie.overview}</p>
-        <h3 className={css.filmSubTitle}>Genres</h3>
-        <ul className={css.styledListDescr}>
+      <div className={css.filmCharacteristics}>
+        <h1 className={css.filmTitle}>{movie.original_title}</h1>
+        <h3 className={css.subTitle}>Rating : {Math.round(movie.vote_average)}</h3>
+        <h3 className={css.subTitle}>Overview :</h3>
+        <p className={css.textDescr}>{movie.overview}</p>
+        <h3 className={css.subTitle}>Genres :</h3>
+        <ul className={css.listNamesGenre}>
           {movie.genres?.map(genre => (
-            <li key={genre.id}>{genre.name}</li>
+            <li className="nameGenre" key={genre.id}>{genre.name}</li>
           ))}
         </ul>
       </div>
@@ -76,7 +76,7 @@ return (
      )}
 
     <div>
-      <h2 >Additional information</h2>
+      <h2 className={css.subTitleInfo}>Additional information</h2>
       <ul>
         <li className={css.detailsLi}>
           <NavLink className="details-link" to="cast" state={location.state}>

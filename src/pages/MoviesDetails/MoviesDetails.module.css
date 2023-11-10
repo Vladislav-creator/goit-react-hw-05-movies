@@ -52,38 +52,31 @@ i {
   gap: 12px;
   margin-top: 12px;
   margin-bottom: 12px;
-};
- .filmImg {
-  max-width: 182px;
-  background: #424242;
-  border-radius: 15px;
- };
-
+}
 .filmTitle {
-  font-size: 26px;
-  margin-bottom: 12px;
-};
+  margin-bottom: 20px;
+  }
+.subTitle {
+  margin-bottom: 15px;
+}
+.textDescr {
+  margin-bottom: 10px;
+}
+.nameGenre {
+  margin-bottom: 5px;
+}
+.listNamesGenre {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+.filmCharacteristics {
+  margin-left: 20px;
+}
+.subTitleInfo {
+  margin-left: 25px;
+}
 
-.filmSubTitle {
-  font-size: 16px;
-  margin-bottom: 6px;
-};
 
-.filmDescr {
-  font-size: 16px;
-  color: #888888;
-  margin-bottom: 12px;
-};
 
-.styledListDescr {
-  font-size: 16px;
-  display: flex;
-  gap: 18px;
-  padding: 0;
-
-  border-radius: 20px;
-  color: #888888;
-  margin-bottom: 12px;
-};
 
 

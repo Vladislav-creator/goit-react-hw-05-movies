@@ -1,22 +1,20 @@
 .styledList {
   margin-top: 12px;
-};
+  margin-bottom: 40px;
+  
+}
 
 .listItem {
-  font-size: 14px;
+  font-size: 18px;
   padding: 6px;
-  background-color: #2a2a2a;
+  
   border-radius: 14px;
 
   :not(:last-child) {
     margin-bottom: 12px;
   }
-
-  span {
-    color: #ffc700;
-  }
-};
+}
 .reviewsDescr {
-  color: #888888;
+  
   margin-top: 6px;
-};
+}

@@ -2,7 +2,7 @@ import { Loader } from './Loader/Loader';
 import { Suspense, lazy } from 'react';
 import css from './App.module.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
-const MovieDetails = lazy(() => import('pages/MoviesDetails/MovieDetails'));
+const MovieDetails = lazy(() => import('pages/MoviesDetails/MoviesDetails'));
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
 export const App = () => {
