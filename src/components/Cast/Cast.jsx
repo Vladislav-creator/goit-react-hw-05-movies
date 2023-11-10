@@ -24,7 +24,7 @@ const Cast = () => {
   return (
     <>
       {
-        <div>
+        <div className={css.wrapper}>
             <h2 className={css.mainTitle}>Actors</h2>
         <ul className={css.styledList}>
           {cast.map(({ id, profile_path, original_name, character }) => (
