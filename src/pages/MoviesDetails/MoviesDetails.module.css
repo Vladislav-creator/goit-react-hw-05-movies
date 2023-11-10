@@ -24,7 +24,8 @@ i {
   box-shadow: 1px 2px 2px 0 rgb(0, 0, 0/0.5);
   transition: box-shadow 250ms linear;
   border-radius: 10px;
-  border: 3px solid #2196f3;
+  border: 3px solid #b38bff;
+  background-color: #b38bff;
  display: inline-block;
  margin-right: 20px;
  &:hover,
@@ -80,13 +81,13 @@ i {
 }
 .detailsLink {
   text-decoration: none;
-  color: gray;
+  color: black;
   font-size: 20px;
   padding: 10px 20px;
   border: 3px solid #b38bff;
   border-radius: 10px;
   transition: all 0.3s;
-  
+  background: #b38bff;
   &:hover,
 &:focus {
   text-shadow: 3px 3px 20px #ff3cac, -2px 1px 30px #ff3cac;
@@ -94,7 +95,7 @@ i {
 }
 }
 .detailsLink.active {
-  border: 3px solid #ff3cac;
+  border: 5px solid #ff3cac;
   color: black;
 }
 .header {
