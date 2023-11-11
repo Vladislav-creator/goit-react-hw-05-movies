@@ -22,3 +22,7 @@
     
   }
 }
+.listFilms li::before {
+  content: "\2605"; 
+  color:#f16092; 
+}

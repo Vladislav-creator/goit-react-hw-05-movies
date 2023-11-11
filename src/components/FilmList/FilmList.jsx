@@ -9,7 +9,7 @@ const FilmsList = ({ movies }) => {
       {movies.map(({ id, original_title }) => (
         <li className={css.itemFilms} key={id}>
           <Link state={{ from: location }} to={`/movies/${id}`}>
-            {original_title}
+          {' '}{original_title}
           </Link>
         </li>
       ))}
