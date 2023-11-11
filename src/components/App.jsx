@@ -15,6 +15,7 @@ export const App = () => {
         <NavLink className="header-link" to="/movies">
           Movies
         </NavLink>
+        <div className={css.camera}></div>
       </header>
       <main>
         <Suspense fallback={<Loader />}>
