@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useEffect, useRef, useState } from 'react';
 import css from './MoviesDetails.module.css';
+import defaultPoster from "../../components/Images/default_poster.jpg"
 import {
   Link,
   NavLink,
@@ -11,8 +12,7 @@ import {
 
 import { getMovieById } from '../../components/services/getMovies';
 import {
-  BASE_POSTER_URL,
-  PLACEHOLDER,
+  BASE_POSTER_URL
 } from '../../components/utils/imgBaseUrl';
 import { Loader } from '../../components/Loader/Loader';
 
@@ -74,15 +74,24 @@ const MoviesDetails = () => {
             src={`${
               movie.poster_path
                 ? BASE_POSTER_URL + movie.poster_path
-                : PLACEHOLDER + '?text=' + movie.original_title
+                : defaultPoster 
             }`}
             alt={movie.original_title}
           />
           <div className={css.filmCharacteristics}>
             <h1 className={css.filmTitle}>{movie.original_title}{movie.release_date && <span> ({movie.release_date.slice(0, 4)})</span>}</h1>
-            <h3 className={css.subTitle}>
-              Rating : {movie.vote_average}
-            </h3>
+            <div className={css.score}>
+                  {movie.vote_count > 0 ? (
+                    <>
+                      User score: {Math.round(movie.vote_average * 10)}%&ensp;
+                      <span className={css.textData} >
+                        ({movie.vote_count} {movie.vote_count === 1 ? 'vote' : 'votes'})
+                      </span>
+                    </>
+                  ) : (
+                    'No votes yet'
+                  )}
+                </div>
             <h3 className={css.subTitle}>Overview :</h3>
             <p className={css.textDescr}>{movie.overview}</p>
             <h3 className={css.subTitle}>Genres :</h3>

@@ -122,6 +122,24 @@ i {
   margin-top: 30px;
   background-image: url(../../components/Images/plenka.png);
   width: 340px;
-  height: 313px;
-  
+  height: 313px; 
+}
+.score {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px 0;
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+}
+}
+.textData {
+  margin: 5px 0;
+  font-size: 1rem;
+  font-weight: 400;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 }

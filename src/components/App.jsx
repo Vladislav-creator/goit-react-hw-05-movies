@@ -1,7 +1,7 @@
 import { Loader } from './Loader/Loader';
 import { Suspense, lazy } from 'react';
 import css from './App.module.css';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
 const MovieDetails = lazy(() => import('pages/MoviesDetails/MoviesDetails'));
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
@@ -23,6 +23,7 @@ export const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="movies/:movieId/*" element={<MovieDetails />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </Suspense>
       </main>

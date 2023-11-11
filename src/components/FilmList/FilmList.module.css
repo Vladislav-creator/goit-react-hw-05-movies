@@ -1,25 +1,24 @@
 .listFilms {
   margin-top: 12px;
-};
+}
 .itemFilms {
   font-weight: 400;
-  font-size: 14px;
-
-  background-color: #2a2a2a;
+  font-size: 20px;
   border-radius: 14px;
-
   :not(:last-child) {
     margin-bottom: 6px;
   }
 
-  a:hover,
-  a:focus {
-    background-color: #ffc700;
-    color: #111111;
+  &:hover,
+  &:focus {
+    color: #ff3cac;
+    
+    width: 100%;
   }
 
-  a {
+  & {
     display: block;
-    padding: 16px 16px;
+    padding: 1px 1px;
+    
   }
-};
+}
