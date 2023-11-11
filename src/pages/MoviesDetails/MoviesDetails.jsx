@@ -81,7 +81,7 @@ const MoviesDetails = () => {
           <div className={css.filmCharacteristics}>
             <h1 className={css.filmTitle}>{movie.original_title}{movie.release_date && <span> ({movie.release_date.slice(0, 4)})</span>}</h1>
             <h3 className={css.subTitle}>
-              Rating : {Math.round(movie.vote_average)}
+              Rating : {movie.vote_average}
             </h3>
             <h3 className={css.subTitle}>Overview :</h3>
             <p className={css.textDescr}>{movie.overview}</p>
