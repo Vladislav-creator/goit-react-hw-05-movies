@@ -15,7 +15,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: all 0.2s ease-in-out;
-    margin: 15px 20px 15px 0;
+    /* margin: 15px 20px 15px 0; */
     color: #fff;
     font-size: 0.8rem;
     font-weight: 500;
@@ -50,4 +50,27 @@
     width: 20px;
     height: 20px;
   }
+}
+.numberPage {
+  color: #fff;
+  border: 1px solid #2b86c5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  opacity: 0.8;
+    background-image: linear-gradient(
+      225deg,
+      #2b86c5 0%,
+      #784ba0 50%,
+      #ff3cac 100%
+    );
+}
+.buttonsCounterPage {
+  margin-top: 15px;
+  margin-left: 15px;
+  display: flex;
+  gap: 10px;
 }
