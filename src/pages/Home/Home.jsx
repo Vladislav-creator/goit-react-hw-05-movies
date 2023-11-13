@@ -3,12 +3,14 @@ import { getTrendingMovies } from '../../components/services/getMovies';
 import FilmsList from '../../components/FilmList/FilmList';
 import { PageButtons } from "../../components/Buttons/PageButtons"
 import { Loader } from '../../components/Loader/Loader';
+
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [data, setData] = useState({});
    const [page, setPage] = useState(1);
    const [isLoading, setIsLoading] = useState(false);
-   const [error, setError] = useState(null);
+ const [error, setError] = useState(null);
+
   useEffect(() => {
     const fetchMovie = async () => {
       try {
