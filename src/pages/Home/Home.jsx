@@ -3,7 +3,7 @@ import { getTrendingMovies } from '../../components/services/getMovies';
 import FilmsList from '../../components/FilmList/FilmList';
 import { PageButtons } from "../../components/Buttons/PageButtons"
 import { Loader } from '../../components/Loader/Loader';
-import { useSearchParams } from 'react-router-dom';
+
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [data, setData] = useState({});
@@ -11,16 +11,14 @@ const Home = () => {
    const [isLoading, setIsLoading] = useState(false);
  const [error, setError] = useState(null);
 
-   const [searchParams, setSearchParams] = useSearchParams();
-
+  
+   
   useEffect(() => {
-   const pagea = Number(searchParams.get('page'));
-   setPage(pagea);
-console.log(pagea);
+  
     const fetchMovie = async () => {
       try {
         setIsLoading(true);
-        const data = await getTrendingMovies(pagea);
+        const data = await getTrendingMovies(page);
          setData(data);
          setMovies(data.results)
         } catch (error) {
@@ -30,14 +28,14 @@ console.log(pagea);
         }
     };
     fetchMovie();
-  }, [searchParams, page]);
+  }, [ page]);
  
   const handlePageChange = useCallback(
     page => {
       setPage(page);
-       setSearchParams({page});
+      
     },
-    [setPage, setSearchParams]
+    [setPage]
   );
   
   return (
