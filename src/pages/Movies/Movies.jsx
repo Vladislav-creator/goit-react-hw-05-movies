@@ -81,7 +81,7 @@ const Movies = () => {
 
   useEffect(() => {
      if (!query) return;
-     setSearchParams({page: page.toString(),query:query.toString()});
+     setSearchParams({page: Number(page),query:query.toString()});
 
     const fetchMovieByQuery = async () => {
       try {
