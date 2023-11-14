@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     
     const fetchMovie = async () => {
-      const currentPage = Number(searchParams.get('page'));
+      const currentPage = Number(searchParams.get('page'))||1;
       // console.log(currentPage);
 
       try {
