@@ -20,7 +20,7 @@ const Home = () => {
 
       try {
         setIsLoading(true);
-        const data = await getTrendingMovies(currentPage);
+        const data = await getTrendingMovies(page);
          setData(data);
          setMovies(data.results)
          setPage(currentPage);
