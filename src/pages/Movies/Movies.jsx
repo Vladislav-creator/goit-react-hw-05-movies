@@ -6,9 +6,6 @@ import Form from '../../components/MoviesPage/SearchBar';
 import FilmsList from '../../components/FilmList/FilmList';
 import { Loader } from '../../components/Loader/Loader';
 const Movies = () => {
-  
- 
-
   const [data, setData] = useState({});
   const [page, setPage] = useState(1);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -18,13 +15,20 @@ const Movies = () => {
 
   useEffect(() => {
     const currentQuery = searchParams.get('query');
-    if (!currentQuery) return;
+     if (!currentQuery) return;
+   console.log(currentQuery);
 
     const fetchMovieByQuery = async () => {
+      const currentPage = Number(searchParams.get('page'))||1; 
       try {
         setIsLoading(true);
         const data = await getMovieByQuery(currentQuery, page);
+        //  console.log(page);
+        // console.log(currentPage);
          setData(data);
+          setPage(currentPage);
+        
+
       } catch (error) {
           setError(error.message);
         } finally {
@@ -37,8 +41,9 @@ const Movies = () => {
   const handlePageChange = useCallback(
     page => {
       setPage(page);
+      setSearchParams({ page });
     },
-    [setPage]
+    [ setSearchParams, setPage]
   );
 
   return (

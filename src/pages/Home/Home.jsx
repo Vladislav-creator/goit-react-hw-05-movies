@@ -51,7 +51,6 @@ const Home = () => {
               page={page}
               totalPages={data.total_pages}
               handlePageChange={handlePageChange}
-              
             /> 
     </div>
   );
