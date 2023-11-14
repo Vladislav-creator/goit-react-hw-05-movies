@@ -3,24 +3,27 @@ import { getTrendingMovies } from '../../components/services/getMovies';
 import FilmsList from '../../components/FilmList/FilmList';
 import { PageButtons } from "../../components/Buttons/PageButtons"
 import { Loader } from '../../components/Loader/Loader';
-// import { useSearchParams } from 'react-router-dom';
+ import { useSearchParams } from 'react-router-dom';
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [data, setData] = useState({});
    const [page, setPage] = useState(1);
    const [isLoading, setIsLoading] = useState(false);
  const [error, setError] = useState(null);
-//  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
     
     const fetchMovie = async () => {
-     
+      const currentPage = Number(searchParams.get('page'));
+      // console.log(currentPage);
+
       try {
         setIsLoading(true);
-        const data = await getTrendingMovies(page);
+        const data = await getTrendingMovies(currentPage);
          setData(data);
          setMovies(data.results)
+         setPage(currentPage);
         } catch (error) {
           setError(error.message);
         } finally {
@@ -28,14 +31,14 @@ const Home = () => {
         }
     };
     fetchMovie();
-  }, [ page]);
+  }, [searchParams, page]);
  
   const handlePageChange = useCallback(
     page => {
       setPage(page);
-      
+      setSearchParams({ page });
     },
-    [setPage]
+    [setSearchParams, setPage]
   );
   
   return (

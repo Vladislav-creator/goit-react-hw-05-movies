@@ -6,6 +6,9 @@ import Form from '../../components/MoviesPage/SearchBar';
 import FilmsList from '../../components/FilmList/FilmList';
 import { Loader } from '../../components/Loader/Loader';
 const Movies = () => {
+  
+ 
+
   const [data, setData] = useState({});
   const [page, setPage] = useState(1);
   const [searchParams, setSearchParams] = useSearchParams();
