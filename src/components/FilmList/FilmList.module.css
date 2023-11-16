@@ -2,6 +2,7 @@
 
 .listFilms {
   margin-top: 12px;
+
 }
 .itemFilms {
   font-weight: 400;
@@ -25,14 +26,11 @@
   }
 }
 .listFilms li::before {
-    content: '';
+  content: "\2605"; 
+  color:#f16092; 
+    /* content: ''; */
     /* background-image: url(${cast}); */
     background-size: cover;
-    position: absolute;
     width: 25px;
     height: 25px;
-    left: -25px;
-  
 }
-/* content: "\2605"; 
-  color:#f16092;  */
